@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background: linear-gradient(rgba(64, 3, 64, 0.696), rgba(33, 28, 28, 0.8)), url("akatsuki.png"); 
+    background-color: black;
+    height: 80vh;
+    height: 80dvh;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+    justify-content: center;
+    gap: 2.2rem;
+    padding-top: 2rem;
+    color: white;
+}
+
+
+.heroSection{
+    color: aliceblue;
+    display: grid;
+    place-items: center;
+    font-weight: 900;
+    font-size: 3rem;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+ion-icon {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  ion-icon:hover{
+    color: rgb(158, 158, 158);
+    scale: 1.1;
+    transition: color 150ms ease-in-out;
+  }
