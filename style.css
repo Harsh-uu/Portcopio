@@ -50,11 +50,12 @@ ul{
 ion-icon {
     font-size: 2rem;
     cursor: pointer;
+    transition: color 150ms ease-in-out;
   }
   ion-icon:hover{
     color: rgb(158, 158, 158);
     scale: 1.1;
-    transition: color 150ms ease-in-out;
+ 
   }
   .circle{
     /* background-image:  url("akatsuki.png"); */
@@ -74,8 +75,9 @@ ion-icon {
     width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
+    transition: scale 200ms ease-in-out;
 }
 .circle:hover>img{
-    scale: 1.05;
-    transition: scale 200ms ease-in-out;
+    scale: 1.1;
+
 }
