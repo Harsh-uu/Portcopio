@@ -6,14 +6,18 @@
 }
 html{
     font-family: 'Poppins', sans-serif;
+    background: #000;
 }
 header{
     display: grid;
     grid-template-rows: auto 1fr;
     background: linear-gradient(rgba(64, 3, 64, 0.696), rgba(33, 28, 28, 0.8)), url("akatsuki.png"); 
+    background-size: cover;
+    background-repeat: no-repeat;
     background-color: black;
     height: 80vh;
     height: 80dvh;
+    position: relative;
 }
 
 ul{
@@ -47,4 +51,17 @@ ion-icon {
     color: rgb(158, 158, 158);
     scale: 1.1;
     transition: color 150ms ease-in-out;
+  }
+  .circle{
+    background-image:  url("akatsuki.png");
+    background-size: cover;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white;
+    aspect-ratio: 1/1;
+    width: 10rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50% ,50%)
   }
