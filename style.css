@@ -1,26 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Poppins:wght@400;700&family=Satisfy&display=swap');
 
 *{
     margin: 0;
     padding: 0;
+box-sizing: border-box;
 }
 *::selection{
     background-color: purple;
 }
+
 html{
     font-family: 'Poppins', sans-serif;
-    background: #000;
+    background: #fff;
+    --primary_color:purple;
+    --bg_color:#0d0a12;
+    --text_color:white;
+    background-color: var(--bg_color);
+    color: var(--text_color);
+    width: 100vw;
+    overflow-x: hidden;
 }
 header{
     display: grid;
     grid-template-rows: auto 1fr;
-    background: linear-gradient(rgba(64, 3, 64, 0.696), rgba(33, 28, 28, 0.8)), url("akatsuki.png"); 
+    background: linear-gradient(rgba(64, 3, 64, 0.777), rgba(33, 28, 28, 0.8)), url("akatsuki.png"); 
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: black;
-    height: 80vh;
-    height: 80dvh;
+    background-color: var(--bg_color);
+    height: 85vh;
+    height: 85dvh;
     position: relative;
 }
 
@@ -33,7 +43,26 @@ ul{
     padding-top: 2rem;
     color: white;
 }
-
+li{
+    position: relative;
+    color: #c5b7b7;
+}
+li:hover{
+    color: var(--text_color);
+}
+li::before{
+    position: absolute;
+    content: " ";
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    background: var(--text_color);
+    scale: 0;
+    transition: scale 180ms ease-in-out;
+}
+li:hover::before{
+    scale: 1;
+}
 
 .heroSection{
     color: aliceblue;
@@ -79,5 +108,62 @@ ion-icon {
 }
 .circle:hover>img{
     scale: 1.1;
+    
+}
+/* main */
+main{
+    margin-block: 8rem;
+}
+main>.about{
+    font-size: larger;
+    text-align: center; 
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 4rem;
+    padding-inline: 3rem;
+}
+.b-1{
+    background-color: var(--primary_color);
+    padding-inline: 4px;
+    color: var(--bg_color);
+}
+.skills{
+    position: relative;
+    background-color: #15101e;
+    padding-block: 2rem;
+    isolation: isolate;
+}
 
+.skills>.S_Title{
+    font-family: 'Satisfy', cursive;
+text-align: center;
+    font-size: 6rem;
+    font-weight: 400;
+    padding-bottom: 2rem;
+}
+
+.pills{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.pill{
+    aspect-ratio: 1/1;
+    width: 8rem;
+    display: grid;
+    place-items: center;
+    font-size: larger;
+    background: var(--bg_color);
+    border-radius: 9999px
+}
+.pill>.icon{
+    font-size: 2rem;
+    transition: scale 150ms ease-in-out;
+}
+.pill:hover>.icon{
+    color: rgb(108, 108, 108);
+    scale: 1.2;
 }

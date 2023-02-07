@@ -1,0 +1,19 @@
+* {
+    scrollbar-width: auto;
+    scrollbar-color: purple var(--bg_color);
+  }
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--bg_color);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: purple;
+    border: 8px solid purple;
+  }
+  *{
+    -webkit-tap-highlight-color: transparent;
+  }
